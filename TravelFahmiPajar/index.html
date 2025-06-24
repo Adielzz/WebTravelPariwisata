@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Wisata Nusantara</title>
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <div class="background-image"></div>
+
+    <div class="login-container">
+      <div class="login-box">
+        <div class="welcome-section">
+          <img src="/img/logopw.png" alt="Logo Wisata" class="welcome-img" />
+          <h2>Fajar Voyages– Di Setiap Awal Perjalanan!</h2>
+          <p>Silakan login untuk menjelajahi destinasi favorit Anda.</p>
+        </div>
+        <form action="includes/auth.php" method="POST">
+          <input type="text" name="username" placeholder="Username" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Masuk</button>
+        </form>
+        <p class="register-text">
+          Belum punya akun? <a href="register/register.php">Daftar di sini</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

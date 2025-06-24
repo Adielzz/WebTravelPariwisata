@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+.nav {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-name {
+  position: absolute;
+  font-size: 22vw;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.profile {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem;
+  max-width: 90%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile-photo {
+  max-width: 300px;
+  height: auto;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.info {
+  max-width: 400px;
+}
+
+.info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.info p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .bg-name {
+    font-size: 30vw;
+  }
+
+  .nav ul {
+    gap: 15px;
+    font-size: 12px;
+  }
+
+  .info h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .info {
+    text-align: center;
+  }
+}

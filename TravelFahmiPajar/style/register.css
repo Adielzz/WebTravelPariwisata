@@ -1,0 +1,114 @@
+/* Gaya dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Background gambar destinasi */
+.background-image {
+  background-image: url("../img/bali.jpg"); /* ganti dengan nama file gambar wisata */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+/* Kontainer login */
+/* Kontainer login ke kanan */
+.login-container {
+  display: flex;
+  justify-content: center; /* ubah dari flex-end ke center */
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  padding: 0; /* padding kanan tidak perlu kalau di tengah */
+}
+
+/* Card login awalnya tanpa blur efek */
+.login-box {
+  background: rgba(255, 255, 255, 0.021);
+  backdrop-filter: none; /* default tidak blur */
+  transition: backdrop-filter 0.4s ease, background 0.4s ease;
+  border-radius: 16px;
+  padding: 40px;
+  width: 350px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.315);
+  color: #fff;
+  text-align: center;
+}
+
+/* Saat hover login-box, background blur diaktifkan */
+.login-box:hover {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+}
+.login-box:hover ~ .background-image {
+  filter: brightness(0.6) blur(5px);
+  transition: filter 0.4s ease;
+}
+
+/* Logo & judul */
+.welcome-img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Input field */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #f1f1f1;
+}
+
+/* Tombol login */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00a86b;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #007f54;
+}
+
+/* Teks register */
+.register-text {
+  margin-top: 15px;
+}
+
+.register-text a {
+  color: #fff;
+  text-decoration: underline;
+}
